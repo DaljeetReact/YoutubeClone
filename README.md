@@ -30,4 +30,4 @@ This is the  whole file structure of the project
 
 # Project image
 
-![PROJECT IMAGE](https://singh-youtube-clone.netlify.app/PROJECT.png)
+![PROJECT IMAGE](https://github.com/DaljeetReact/YoutubeClone/blob/main/PROJECT.png)
