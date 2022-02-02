@@ -1,4 +1,4 @@
-import  React from 'react';
+import  React,{useEffect} from 'react';
 import {AppBar,Box,Toolbar,IconButton,Typography} from '@mui/material';
 import {Menu as MenuIcon,YouTube as YouTubeIcon ,Search as SearchIcon} from '@mui/icons-material';
 import  {Search,SearchIconWrapper,StyledInputBase} from './Styles'
@@ -7,9 +7,6 @@ import {Store} from '../Store';
 export default function Header() {
   const [query, setquery] = React.useState('');
   const {Dispatch}  =  React.useContext(Store);
-  React.useEffect(() => {
-    UpdateVideos();
-  },[])
 
   const HandleSubmit=(e)=>{
     e.preventDefault();
@@ -23,6 +20,9 @@ export default function Header() {
       Dispatch({type:'Selected',value:data[0]});
     });
   }
+  useEffect(() => {
+    UpdateVideos();
+  },[]);
 
   return (
     <Box sx={{ flexGrow: 1 }}>
