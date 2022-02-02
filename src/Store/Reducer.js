@@ -1,4 +1,5 @@
 export const Reducer = (state,Action) =>{
+    console.info({Action})
     switch(Action.type){
         case "loading":
         return {

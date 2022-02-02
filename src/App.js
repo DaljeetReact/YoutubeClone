@@ -4,7 +4,6 @@ import { red } from '@mui/material/colors';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import {AppContextProvider,Reducer,InitState} from './Store'
 
-
 const theme = createTheme({
   palette: {
     primary: {
@@ -14,11 +13,9 @@ const theme = createTheme({
 });
 
 function App() {
-  const [State, setState] = useReducer(Reducer,InitState);
-
-
+  const [State, Dispatch] = useReducer(Reducer,InitState);
   return (
-    <AppContextProvider value={{State,setState}}>
+    <AppContextProvider value={{State,Dispatch}}>
       <ThemeProvider theme={theme}>
          <Home />
       </ThemeProvider>

@@ -1,19 +1,21 @@
 import React, { useContext } from 'react';
-import { Grid } from '@mui/material';
-import {Header,VideoDetails,VideoList} from '../Componets'
-import {youtTube} from '../Apis'
-function Home(props) {
-
+import { Grid, Box } from '@mui/material';
+import { Header, VideoDetails, VideoList } from '../Componets'
+function Home() {
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={1} backgroundColor={'#F9F9F9'}>
       <Grid item xs={12}>
-         <Header/>
+        <Header />
       </Grid>
       <Grid item xs={12} md={8}>
-        <VideoDetails/>
+        <Box p={2}>
+          <VideoDetails />
+        </Box>
       </Grid>
       <Grid item md={4}>
-        <VideoList/>
+        <Box p={2}>
+          <VideoList />
+        </Box>
       </Grid>
     </Grid>
   );
