@@ -1,4 +1,4 @@
-import  React,{useEffect} from 'react';
+import  React from 'react'; 
 import {AppBar,Box,Toolbar,IconButton,Typography} from '@mui/material';
 import {Menu as MenuIcon,YouTube as YouTubeIcon ,Search as SearchIcon} from '@mui/icons-material';
 import  {Search,SearchIconWrapper,StyledInputBase} from './Styles'
@@ -20,7 +20,7 @@ export default function Header() {
       Dispatch({type:'Selected',value:data[0]});
     });
   }
-  
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
