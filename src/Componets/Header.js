@@ -6,7 +6,7 @@ import {youtTube} from '../Apis';
 import {Store} from '../Store';
 export default function Header() {
   const [query, setquery] = React.useState('');
-  const {Dispatch,State}  =  React.useContext(Store);
+  const {Dispatch}  =  React.useContext(Store);
   React.useEffect(() => {
     UpdateVideos();
   },[])
