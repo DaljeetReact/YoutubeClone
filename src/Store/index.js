@@ -3,7 +3,6 @@ export {Reducer} from './Reducer';
 export const InitState = {
     Videos: [],
     Selected:[],
-    QueryString:'',
     loading: false
  }// Interface for Context Api
  

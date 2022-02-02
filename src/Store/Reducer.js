@@ -5,10 +5,15 @@ export const Reducer = (state,Action) =>{
             ...state,
             loading: Action.value
         };
-        case "Places":
+        case "Videos":
         return {
             ...state,
-            Places: Action.value
+            Videos: Action.value
+        };
+        case "Selected":
+        return {
+            ...state,
+            Selected: Action.value
         };
         default:{
             return state;
