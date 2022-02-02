@@ -5,7 +5,7 @@ import  {Search,SearchIconWrapper,StyledInputBase} from './Styles'
 import {youtTube} from '../Apis';
 import {Store} from '../Store';
 export default function Header() {
-  const [query, setquery] = React.useState('');
+  const [query, setquery] = React.useState('Punjabi songs');
   const {Dispatch}  =  React.useContext(Store);
 
   const HandleSubmit=(e)=>{
@@ -20,10 +20,7 @@ export default function Header() {
       Dispatch({type:'Selected',value:data[0]});
     });
   }
-  useEffect(() => {
-    UpdateVideos();
-  },[]);
-
+  
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
